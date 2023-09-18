@@ -33,7 +33,7 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Build Docker Image
+    - name: Build and push Docker Image 
       id: buildAndPushImage
       uses: MaximilianoBz/dockerhub-buildpush@v1.0
       with:
