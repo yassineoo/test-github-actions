@@ -32,7 +32,8 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew build
+      run: |
+        ./gradlew build || exit 1
     - name: Build and push Docker Image 
       id: buildAndPushImage
       uses: MaximilianoBz/dockerhub-buildpush@v1.0
